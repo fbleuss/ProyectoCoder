@@ -1,0 +1,196 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+
+    --MARGEN-DEL-SITIO: 20%;
+
+}
+header{
+    background: rgb(5, 133, 12);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+.header-container{
+    margin: 0 var(--MARGEN-DEL-SITIO);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-logotype a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header-logotype img{
+    height: 75px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+.header-logotype p{
+    color: white;
+    margin-left: 10px;
+    font-size: 20px;
+    font-style: italic;
+}
+.header-menu ul{
+    list-style: none;
+    display: inline-block;
+}
+.header-menu ul li{
+    display: inline-block;
+}
+.header-menu ul li a{
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(240, 240, 12);
+    padding: 10px 25px;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all .5s;
+    border: #222 2px solid;
+}
+.header-menu ul li a:hover{
+    background: rgb(245, 205, 9);
+    color: white;
+}
+.header-space{
+    height: 100px;
+}
+
+section#inicio{
+    background: #222 url('../assets/background.jpg') center center no-repeat fixed;
+    background-size: cover;
+
+    height: calc(75vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+section#inicio .section-container{
+    margin: 0 var(--MARGEN-DEL-SITIO);
+}
+section#inicio h1{
+    margin: 0;
+    padding: 20px;
+    border: none;
+    font-size: 2em;
+    color: white;
+    background: rgba(0, 0, 0, .75);
+}
+section#inicio p{
+    position: absolute;
+    bottom: 10px;
+    margin: 0;
+    padding: 0;
+}
+section#catalogo, section#servicios{
+    padding: 100px var(--MARGEN-DEL-SITIO);
+}
+section h1{
+    margin: 25px 0;
+    padding: 0 0 5px 0;
+    display: block;
+    border-bottom: #e0e0e0 1px solid;
+}
+
+
+.grid-catalogo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.grid-articulo{
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: #F2F2F2;
+    box-shadow: rgba(0, 0, 0, .1) 0 0 10px;
+    position: relative;
+    z-index: 5;
+}
+.grid-articulo img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+.grid-articulo h2{
+    text-align: center;
+}
+.grid-articulo p.oferta{
+    position: absolute;
+    border-radius: 10px;
+    transform: rotate(-10deg);
+    top: -5px;
+    left: -5px;
+    padding: 10px;
+    background: red;
+    color: white;
+}
+
+footer{
+    background: #222;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+footer p{
+    color: white;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 1000px){
+    *{
+        --MARGEN-DEL-SITIO: 3%;
+    }
+    .grid-catalogo{
+        grid-template-columns: 1fr;
+    }
+}
+
+section#contacto{
+    margin: 0 var(--MARGEN-DEL-SITIO);
+    display: flex;
+}
+section#contacto .contenedor{
+    width: 100%;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+form div{
+    width: 100%;
+}
+form input{
+    height: 50px;
+    width: 100%;
+    margin: 20px 0;
+    border: seagreen solid 2px;
+    border-radius: 15px;
+    padding: 0 20px;
+}
+.boton{
+    color: whitesmoke;
+    font-size: 2em;
+    background: seagreen;
+}
+
